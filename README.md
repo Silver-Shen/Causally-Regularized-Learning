@@ -7,9 +7,9 @@ Here is a simple demo showing how it works in Matlab:
 
 ```matlab
 % Generate predictor X and outcome Y (binary)
-X = round(rand(1000, 20)); % 1000 samples and 20 features
+X = 2*round(rand(1000, 20))-1; % 1000 samples and 20 features
 beta_true = ones(20, 1);
-Y = sigmoid(X*beta_true);
+Y = double(sigmoid(X*beta_true)>=0.5);
 lambda0 = 1; %Logistic loss
 lambda1 = 0.1; %Balancing loss
 lambda2 = 1; %L_2 norm of sample weight

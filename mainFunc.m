@@ -73,4 +73,5 @@ for iter = 1:MAXITER
         break
     end   
 end    
+W = W.*W;
 end
